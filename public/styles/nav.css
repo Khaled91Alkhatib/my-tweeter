@@ -1,3 +1,7 @@
+nav {
+  width: 100%
+}
+
 .newLogo {
   height: 120px;
   background-color: #4056A1;
@@ -23,5 +27,4 @@
 
 p {
   margin: 0;
-  padding: 0;
   }
