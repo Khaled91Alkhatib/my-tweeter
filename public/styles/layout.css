@@ -15,14 +15,26 @@ html {
  */
 
 body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff8400;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");;
   color: #545149;
-  background-color: #f4f1ec;
   font-size: 39px;
   font-family: "Source Sans Pro", "sans-serif";
 }
 
 .logo {
   font-family: "Bungee", "sans-serif";
+}
+
+.container{
+  width: 90%;
+  background-color: #ff8400;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");;
+
 }
 
 /*
