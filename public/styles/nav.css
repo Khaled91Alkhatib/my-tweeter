@@ -5,6 +5,7 @@
   text-indent: 1.5em;
   padding-right: 1.5em;
   padding-top: 60px;
+  margin:auto
 }
 
 .arrowAndTweet {
@@ -12,7 +13,6 @@
   flex-direction: column;
   float: right;
   font-size: 22px;
-
 }
 
 .arrow {
@@ -20,3 +20,8 @@
   justify-content: center;
   color:red;
 }
+
+p {
+  margin: 0;
+  padding: 0;
+  }
