@@ -1,0 +1,22 @@
+.newLogo {
+  height: 120px;
+  background-color: #4056A1;
+  color : #FFFFFF;
+  text-indent: 1.5em;
+  padding-right: 1.5em;
+  padding-top: 60px;
+}
+
+.arrowAndTweet {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  font-size: 22px;
+
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  color:red;
+}
