@@ -3,20 +3,24 @@ nav {
 }
 
 .newLogo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   height: 120px;
   background-color: #4056A1;
   color : #FFFFFF;
   text-indent: 1.5em;
   padding-right: 1.5em;
-  padding-top: 60px;
+  padding-top: 45px;
   margin:auto
 }
 
 .arrowAndTweet {
   display: flex;
   flex-direction: column;
-  float: right;
+  justify-content: flex-end;
   font-size: 22px;
+  padding-bottom: 30px;
 }
 
 .arrow {
