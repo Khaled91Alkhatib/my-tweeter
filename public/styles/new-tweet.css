@@ -1,0 +1,39 @@
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+.tweet-and-counter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-button {
+  background-color: #4056A1;
+  color : #FFFFFF;
+  font-family:Bungee;
+  font-size: large;
+}
+
+.button {
+  font-family:Bungee;
+  font-size: x-large;
+}
+
+.text-area {
+  width: 100%;
+  background-color: #ff8400;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: groove;
+  resize: none;
+  height: 55px
+}
+
+h3 {
+  margin: 0;
+}
