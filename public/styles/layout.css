@@ -26,6 +26,10 @@ body {
   font-family: "Source Sans Pro", "sans-serif";
 }
 
+main {
+  margin-top: 104.5px;
+}
+
 .logo {
   font-family: "Bungee", "sans-serif";
 }
