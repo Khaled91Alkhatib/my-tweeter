@@ -22,7 +22,7 @@ body {
   background-color: #ff8400;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");;
   color: #545149;
-  font-size: 39px;
+  font-size: 32px;
   font-family: "Source Sans Pro", "sans-serif";
 }
 
@@ -30,13 +30,49 @@ body {
   font-family: "Bungee", "sans-serif";
 }
 
-.container{
+.container {
   width: 90%;
   background-color: #ff8400;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");;
 
 }
 
+.header-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+header {
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+}
+
+article {
+  font-size: 30px;
+  margin-top: 2em;
+  border-style: solid;
+  border-color: #545149;
+  border-width: thick;
+  padding: 0.5em;
+}
+
+article:hover {
+  box-shadow: 3px 3px 3px 3px #74716a;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: solid;
+  border-width: thick;
+  font-size: 20px;
+  margin-top: 1em;
+  padding: 0.5em;
+}
+
+.tweet-icons:hover {
+  color: red
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
