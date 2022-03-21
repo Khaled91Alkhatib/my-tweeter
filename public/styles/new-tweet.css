@@ -26,10 +26,12 @@
   width: 100%;
   background-color: #ff8400;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
-  border-top-style: hidden;
-  border-right-style: hidden;
-  border-left-style: hidden;
-  border-bottom-style: groove;
+  border-bottom: solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-width: thick;
+  border-color: #545149;
   resize: none;
   height: 55px
 }
