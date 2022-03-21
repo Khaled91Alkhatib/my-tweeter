@@ -2,11 +2,12 @@ $(document).ready(function() {
   $(".text-area").keyup(function() {
     const textToVal = $(this).val();
     const remainder = 140 - textToVal.length;
-    $(".counter").html(remainder);
+    const counter = $(this).parent().find(".counter");
+    counter.val(remainder);
     if (remainder < 0) {
-      $(".counter").addClass("red");
+      counter.css("color", "red");
     } else {
-      $(".counter").removeClass("red"); // change color back to normal if count is > 0
+      counter.css("color", "");
     }
   });
 });
