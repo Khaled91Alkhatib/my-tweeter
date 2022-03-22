@@ -49,16 +49,23 @@ const loadTweet = function () {
 $(document).ready(function () { // helpful to be excuted after all the code runs
   $("form").submit(function (event) {
     event.preventDefault();
-    $.ajax("/tweets", {
-      method: "POST",
-      data: $(this).serialize(),
-    }).then(() => {
-      $("textarea").val("");
-      $.get("/tweets", (serverResponse) => {
-        const newTweet = [serverResponse.slice(-1).pop()];
-        renderTweets(newTweet);
+    if ($("textarea").val().length <= 0) {
+      alert("Tweet can not be empty!");
+    } else if ($("textarea").val().length > 140) {
+      alert("Tweet exceeds allowed length");
+    } else {
+      $.ajax("/tweets", {
+        method: "POST",
+        data: $(this).serialize(),
+      }).then(() => {
+        $("textarea").val("");
+        $("output").text(140);
+        $.get("/tweets", (serverResponse) => {
+          const newTweet = [serverResponse.slice(-1).pop()];
+          renderTweets(newTweet);
+        });
       });
-    });
+    }
   });
   loadTweet();
 });
