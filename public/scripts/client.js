@@ -58,6 +58,7 @@ $(document).ready(function () { // helpful to be excuted after all the code runs
         method: "POST",
         data: $(this).serialize(),
       }).then(() => {
+        // the code below will allow new tweets to be added and textarea cleaned without refreshing the page
         $("textarea").val("");
         $("output").text(140);
         $.get("/tweets", (serverResponse) => {
