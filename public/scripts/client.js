@@ -4,6 +4,8 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// const { format } = require("express/lib/response");
+
 const tweets = [
   {
     user: {
@@ -30,7 +32,6 @@ const tweets = [
 ];
 
 const createTweetElement = function (tweetData) {
-  console.log(tweetData, "tweetdata");
   const postedTweet = `<article id="tweets-container">
   <header>
     <div class = "header-content">
@@ -62,3 +63,13 @@ const renderTweets = function (tweets) {
 };
 
 renderTweets(tweets);
+
+$("form").submit(function(event) {
+  event.preventDefault()
+  $.ajax("/tweets", {
+    method: 'POST',
+    data: $(this).serialize()
+  }).then(() => {
+    console.log("response")
+  });
+});
