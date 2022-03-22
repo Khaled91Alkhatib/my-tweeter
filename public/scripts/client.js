@@ -39,29 +39,26 @@ const renderTweets = function (tweets) {
 
 const loadTweet = function () {
   $.ajax("/tweets", {
-    method: 'GET',
-    dataType: 'json'
+    method: "GET",
+    dataType: "json",
   }).then((response) => {
     renderTweets(response);
-  })
-}
+  });
+};
 
 $(document).ready(function () { // helpful to be excuted after all the code runs
-  console.log("abc")
-  $("form").submit(function(event) {
-    event.preventDefault()
+  $("form").submit(function (event) {
+    event.preventDefault();
     $.ajax("/tweets", {
-      method: 'POST',
-      data: $(this).serialize()
+      method: "POST",
+      data: $(this).serialize(),
     }).then(() => {
-      $("textarea").val("")
+      $("textarea").val("");
       $.get("/tweets", (serverResponse) => {
-        const newTweet = [serverResponse.slice(-1).pop()]
-        renderTweets(newTweet)
-      })
+        const newTweet = [serverResponse.slice(-1).pop()];
+        renderTweets(newTweet);
+      });
     });
   });
-  loadTweet()
-})
-console.log("123")
-
+  loadTweet();
+});
