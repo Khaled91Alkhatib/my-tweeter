@@ -5,20 +5,26 @@
  */
 
 const createTweetElement = function (tweetData) {
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+  
   const postedTweet = `<article id="tweets-container">
   <header>
     <div class = "header-content">
       <div class="image-name">
         <img src="https://i.imgur.com/73hZDYK.png">
-        <span style="margin-left: 0.5em;">${tweetData.user.name}</span>
+        <span style="margin-left: 0.5em;">${escape(tweetData.user.name)}</span>
       </div>
-      <span style="color: rgb(165, 103, 223);">${tweetData.user.handle}</span>
+      <span style="color: rgb(165, 103, 223);">${escape(tweetData.user.handle)}</span>
     </div>
     <br>
-    <span><strong>${tweetData.content.text}</strong></span>
+    <span><strong>${escape(tweetData.content.text)}</strong></span>
   </header>
   <footer>
-    <span>${timeago.format(tweetData.created_at)}</span>
+    <span>${escape(timeago.format(tweetData.created_at))}</span>
     <div>
       <i class="fa-solid fa-flag tweet-icons"></i>
       <i class="fa-solid fa-retweet icon tweet-icons"></i>
