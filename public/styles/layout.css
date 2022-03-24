@@ -52,18 +52,9 @@ article:hover {
   box-shadow: 3px 3px 3px 3px #74716a;
 }
 
-.logo {
-  font-family: "Bungee", "sans-serif";
-}
-
 .header-content {
   display: flex;
   justify-content: space-between;
-}
-
-header {
-  margin-bottom: 0.5em;
-  padding: 0.6em;
 }
 
 footer {
@@ -95,7 +86,3 @@ footer {
   padding-left: 0.5em;
   font-weight: bold;
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
