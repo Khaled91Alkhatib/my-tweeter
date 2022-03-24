@@ -22,7 +22,7 @@ body {
   background-color: #ff8400;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");;
   color: #545149;
-  font-size: 32px;
+  font-size: 29px;
   font-family: "Source Sans Pro", "sans-serif";
 }
 
@@ -30,15 +30,30 @@ main {
   margin-top: 104.5px;
 }
 
-.logo {
-  font-family: "Bungee", "sans-serif";
-}
-
 .container {
   width: 90%;
   background-color: #ff8400;
-  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+}
 
+article {
+  font-size: 26px;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  border-style: solid;
+  border-color: #545149;
+  border-width: thick;
+  padding: 0.5em;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  background-color: beige;
+}
+
+article:hover {
+  box-shadow: 3px 3px 3px 3px #74716a;
+}
+
+.logo {
+  font-family: "Bungee", "sans-serif";
 }
 
 .header-content {
@@ -48,20 +63,7 @@ main {
 
 header {
   margin-bottom: 0.5em;
-  padding: 0.5em;
-}
-
-article {
-  font-size: 30px;
-  margin-top: 2em;
-  border-style: solid;
-  border-color: #545149;
-  border-width: thick;
-  padding: 0.5em;
-}
-
-article:hover {
-  box-shadow: 3px 3px 3px 3px #74716a;
+  padding: 0.6em;
 }
 
 footer {
@@ -82,6 +84,18 @@ footer {
   display: flex;
   align-items: center;
 }
+
+.empty-error-msg, .long-text-area {
+  display: none;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  background-color: beige;
+  border-style: solid;
+  color: red;
+  border-width: thick;
+  padding-left: 0.5em;
+  font-weight: bold;
+}
+
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
