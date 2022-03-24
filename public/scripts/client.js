@@ -10,7 +10,7 @@ const createTweetElement = function (tweetData) {
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
-  
+
   const postedTweet = `<article id="tweets-container">
   <header>
     <div class = "header-content">
@@ -18,10 +18,14 @@ const createTweetElement = function (tweetData) {
         <img src=${escape(tweetData.user.avatars)}>
         <span style="margin-left: 0.5em;">${escape(tweetData.user.name)}</span>
       </div>
-      <span style="color: rgb(165, 103, 223);">${escape(tweetData.user.handle)}</span>
+      <span style="color: rgb(165, 103, 223);">${escape(
+        tweetData.user.handle
+      )}</span>
     </div>
     <br>
-    <span><strong>${escape(tweetData.content.text)}</strong></span>
+    <span style="margin-left: 0.5em;"><strong>${escape(
+      tweetData.content.text
+    )}</strong></span>
   </header>
   <footer>
     <span>${escape(timeago.format(tweetData.created_at))}</span>
@@ -52,15 +56,15 @@ const loadTweet = function () {
   });
 };
 
-$(document).ready(function () { // helpful to be excuted after all the code runs
+$(document).ready(function () {  // helpful so that the code is excuted after all the code runs
   $("form").submit(function (event) {
     event.preventDefault();
     if ($("textarea").val().length <= 0) {
-      const errorMsg = $(this).parent().find(".empty-error-msg")
-      errorMsg.css("visibility", "visible").slideDown(200).fadeOut(4000);
+      const errorMsg = $(this).parent().find(".empty-error-msg");
+      errorMsg.css("visibility", "visible").slideDown(200).fadeOut(4000); // edge case
     } else if ($("textarea").val().length > 140) {
-      const errorMsg = $(this).parent().find(".long-text-area")
-      errorMsg.css("visibility", "visible").slideDown(200).fadeOut(4000);
+      const errorMsg = $(this).parent().find(".long-text-area");
+      errorMsg.css("visibility", "visible").slideDown(200).fadeOut(4000); // edge case
     } else {
       $.ajax("/tweets", {
         method: "POST",
