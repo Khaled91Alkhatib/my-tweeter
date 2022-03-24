@@ -15,7 +15,7 @@ const createTweetElement = function (tweetData) {
   <header>
     <div class = "header-content">
       <div class="image-name">
-        <img src="https://i.imgur.com/73hZDYK.png">
+        <img src=${escape(tweetData.user.avatars)}>
         <span style="margin-left: 0.5em;">${escape(tweetData.user.name)}</span>
       </div>
       <span style="color: rgb(165, 103, 223);">${escape(tweetData.user.handle)}</span>
@@ -56,9 +56,11 @@ $(document).ready(function () { // helpful to be excuted after all the code runs
   $("form").submit(function (event) {
     event.preventDefault();
     if ($("textarea").val().length <= 0) {
-      alert("Tweet can not be empty!");
+      const errorMsg = $(this).parent().find(".empty-error-msg")
+      errorMsg.css("visibility", "visible").slideDown(200).fadeOut(4000);
     } else if ($("textarea").val().length > 140) {
-      alert("Tweet exceeds allowed length");
+      const errorMsg = $(this).parent().find(".long-text-area")
+      errorMsg.css("visibility", "visible").slideDown(200).fadeOut(4000);
     } else {
       $.ajax("/tweets", {
         method: "POST",
