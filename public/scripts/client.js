@@ -18,7 +18,7 @@ const createTweetElement = function (tweetData) {
         <img src=${escape(tweetData.user.avatars)}>
         <span style="margin-left: 0.5em;">${escape(tweetData.user.name)}</span>
       </div>
-      <span style="color: rgb(165, 103, 223);">${escape(
+      <span style="color: rgb(165, 103, 223); display: flex; align-items: center">${escape(
         tweetData.user.handle
       )}</span>
     </div>
