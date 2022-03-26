@@ -30,9 +30,9 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <div class="newLogo">
+      <div class="new-logo">
         <span style="font-family:Bungee, sans-serif">tweeter</span>
-        <div class="arrowAndTweet">
+        <div class="arrow-and-tweet">
           <p><strong>Write</strong> a new tweet</p>
           <span class="fa-solid fa-angles-down arrow"></span>
         </div>
@@ -49,19 +49,21 @@
             <h2>Khaled Alkhatib</h2>
         </div>
       </header>
-      <section class="new-tweet">
-        <div class="long-text-area">⚠ Text exceeds allowed character length! ⚠</div>
-        <div class="empty-error-msg">⚠ Text area can not be empty! ⚠</div>
-        <h3>Compose Tweet</h3>
-        <form action="/tweets" method="post" enctype="application/x-www-form-urlencoded">
-          <textarea class="text-area" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          <div class="tweet-and-counter">
-            <button class="tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter button" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <div id="tweets-container"></div>
+      <div>
+        <section class="new-tweet">
+          <div class="long-text-area">⚠ Text exceeds allowed character length! ⚠</div>
+          <div class="empty-error-msg">⚠ Text area can not be empty! ⚠</div>
+          <h3>Compose Tweet</h3>
+          <form action="/tweets" method="post" enctype="application/x-www-form-urlencoded">
+            <textarea class="text-area" name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+            <div class="tweet-and-counter">
+              <button class="tweet-button" type="submit">Tweet</button>
+              <output name="counter" class="counter button" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <div id="tweets-container"></div>
+      </div>
     </main>
   </body>
 </html>
