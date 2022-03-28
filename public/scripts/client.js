@@ -1,11 +1,5 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 const createTweetElement = function (tweetData) {
-  const escape = function (str) {
+  const escape = function (str) { // This function prevents Cross-Site Scripting by re-encoding text
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
@@ -45,8 +39,6 @@ const renderTweets = function (tweets) {
   });
 };
 
-// renderTweets(tweets);
-
 const loadTweet = function () {
   $.ajax("/tweets", {
     method: "GET",
@@ -55,6 +47,14 @@ const loadTweet = function () {
     renderTweets(response);
   });
 };
+
+$(document).ready(function () {
+  // Upon button click, the area to write a new tweet will slide down and cursor will be already set to type
+  $(".compose").click(function () {  
+    $(".new-tweet").slideDown();
+    $(".text-area").focus();
+  });
+});
 
 $(document).ready(function () {  // helpful so that the code is excuted after all the code runs
   $("form").submit(function (event) {
@@ -72,7 +72,7 @@ $(document).ready(function () {  // helpful so that the code is excuted after al
       }).then(() => {
         // the code below will allow new tweets to be added and textarea cleaned without refreshing the page
         $("textarea").val("");
-        $("output").text(140);
+        $("output").text(140); // reset counter
         $.get("/tweets", (serverResponse) => {
           const newTweet = [serverResponse.slice(-1).pop()];
           renderTweets(newTweet);
