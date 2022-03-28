@@ -9,14 +9,13 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   height: 120px;
-  /* background-color: #4056A1; */
   background-color: #ff8400;
   background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
   font-size: 32px;
   color : #FFFFFF;
   text-indent: 1.5em;
   padding-right: 1.5em;
-  padding-top: 45px;
+  padding-top: 38px;
   margin:auto
 }
 
@@ -31,12 +30,18 @@ nav {
 .arrow {
   display: flex;
   justify-content: center;
-  color:red;
+  color: red;
+  text-indent: 0;
 }
 
 p {
   margin: 0;
   }
+
+.compose {
+  color: white;
+  background-color: #4056A1;
+}
 
   @media only screen and (min-width: 1024px) {
     .new-logo {
