@@ -17,7 +17,7 @@ const createTweetElement = function (tweetData) {
       )}</span>
     </div>
     <br>
-    <span style="margin-left: 0.5em;"><strong>${escape(
+    <span style="margin-left: 0.5em; word-wrap:break-word"><strong>${escape(
       tweetData.content.text
     )}</strong></span>
   </header>
