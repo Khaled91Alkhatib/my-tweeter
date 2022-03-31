@@ -91,6 +91,10 @@ footer {
   .container {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+  }
+  .new-width{
+    width: 60%;
   }
   .newLogo {
     background-color: #4056A1;
